@@ -1,0 +1,15 @@
+<?php 
+// Mail server specification
+ini_set("SMTP","SMPT.MYDOMAIN.COM");
+
+//Email specification.
+$To = 'testuser@domain.com'; 
+$Subject = 'Send Email'; 
+$Message = 'This example demonstrates how you can send plain text email with PHP'; 
+$Headers = "From: domain@mydomain.co.ke \r\n" . 
+"Reply-To: domain@mydomain.co.ke \r\n" . 
+"Content-type: text/html; charset=UTF-8 \r\n"; 
+
+// 
+mail($To, $Subject, $Message, $Headers); 
+?>
